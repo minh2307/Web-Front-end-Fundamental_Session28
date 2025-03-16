@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cart = [
+            { name: "Mèn mén", price: 30000, quantity: 2 },
+
+            { name: "Mì tôm", price: 5000, quantity: 1 },
+
+            { name: "Bánh bao", price: 15000, quantity: 3 }
+
+        ];
+        let sumPrice = function (cart = []) {
+            return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        };
+        console.log(`Tổng tiền có trong giỏ hàng là `, sumPrice(cart));
+
+    </script>
+</body>
+
+</html>

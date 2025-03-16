@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width+ initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let passedStudents = students.reduce((acc, student) => {
+            let { math, english, literature } = student.scores;
+            let average = (math + english + literature) / 3;
+            if (average >= 8) {
+                acc.push(student);
+            }
+            return acc;
+        }, []);
+        passedStudents.forEach(student => console.log(student.name));
+    </script>
+</body>
+
+</html>
